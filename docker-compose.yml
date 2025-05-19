@@ -1,0 +1,16 @@
+services:
+
+  media-app:
+    build: .
+    container_name: ussd-bus-booking-system-app
+    ports:
+      - "3200:3000"
+    environment:
+      - NODE_ENV=production
+    
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

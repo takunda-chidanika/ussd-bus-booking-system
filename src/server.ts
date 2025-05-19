@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(loggerMiddleware);
 
 app.use(router);
+
 app.listen(PORT, () =>{
     log.info(`Server is running on port http://localhost:${PORT}`);
 })
